@@ -10,6 +10,18 @@ import { Header } from './components/header/header';
 })
 export class App {
 
-  userName: string = 'Juan';
+  number: number = 0;
+
+  addOne() {
+    this.number ++;
+
+    if (this.number > 10) {
+      this.number = 0;
+    }
+  }
+
+  resetNumber() {
+    this.number = 0;
+  }
 
 }

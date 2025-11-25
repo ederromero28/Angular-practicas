@@ -1,6 +1,4 @@
-<h1>Hola bienvenido {{ userName }}</h1>
+<h1>Number: {{ number }}</h1>
 
-<input type="text" [value]="userName">
-
-<!-- Selector app-header del componente Header -->
-<app-header></app-header>
+<input type="button" value="Sumar +1" (click)="addOne()">
+<input type="button" value="Resetear" (click)="resetNumber()">
