@@ -10,19 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.css'
 })
 export class App {
-  userName: string = '';
-  number: number = 0;
-
-  addOne() {
-    this.number++;
-  }
-
-  /* --- ADICIONAL ---
-  Con esta funcion podemos actualizar el contador de caracteres del nombre de usuario, aumenta y disminuye segun se escriba o borre texto.
-
-    updateCount() {
-    this.number = this.userName ? this.userName.length : 0;
-  }
-  --- FIN ADICIONAL --- */
+  condition: boolean = false;
+  condition2: string = '';
 
 }
