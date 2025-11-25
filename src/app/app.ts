@@ -1,34 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Header } from './components/header/header';
-import { FormsModule } from '@angular/forms';
+import { Child } from "./components/child/child";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, FormsModule],
+  imports: [Child],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
-  movies: string[] = ['The Godfather', 'Pulp Fiction', 'Inception', 'The Dark Knight', 'Forrest Gump'];
+  text: String = 'Variable desde el padre';
 
-  animals: any = [
-  {
-    id: 1,
-    name: "dog",
-    img: "https://nypost.com/wp-content/uploads/sites/2/2022/12/worlds-cutest-dog-comp-1.jpg",
-  },
-  {
-    id: 2,
-    name: "cat",
-    img: "https://img.freepik.com/foto-gratis/lindo-gatito-domestico-sienta-ventana-mirando-fuera-ia-generativa_188544-12519.jpg",
-  },
-  {
-    id: 3,
-    name: "bird",
-    img: "https://media.cnn.com/api/v1/images/stellar/prod/190414090035-01-cassowary.jpg",
-  },
-];
+  person: any = {
+    sex: 'hombre',
+    age: 30
+  };
 
 }
