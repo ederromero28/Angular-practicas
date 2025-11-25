@@ -1,4 +1,4 @@
-<h1>Number: {{ number }}</h1>
+<h1>Usuario: {{ userName }}</h1>
+<h2>Caracteres contador: {{ number }}</h2>
 
-<input type="button" value="Sumar +1" (click)="addOne()">
-<input type="button" value="Resetear" (click)="resetNumber()">
+<input type="text" [(ngModel)]="userName" (input)="addOne()" >
