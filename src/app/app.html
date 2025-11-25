@@ -4,4 +4,11 @@
   <p>{{ $index + 1}} {{movie}}</p>
 }
 
-
+<ul>
+@for (animal of animals; track animal.id) {
+  <li>
+    <h2>{{animal.name}}</h2>
+    <img [src]="animal.img" alt="" width="200px">
+  </li>
+}
+</ul>
