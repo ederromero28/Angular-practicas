@@ -9,10 +9,10 @@ import { Child } from "./components/child/child";
 })
 export class App {
 
-  name: String = '';
+  userName: string;
 
-  setName(e : any){
-    this.name = e;
+  constructor() {
+    this.userName = 'Eder';
   }
 
 }
