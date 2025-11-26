@@ -9,11 +9,10 @@ import { Child } from "./components/child/child";
 })
 export class App {
 
-  text: String = 'Variable desde el padre';
+  name: String = '';
 
-  person: any = {
-    sex: 'hombre',
-    age: 30
-  };
+  setName(e : any){
+    this.name = e;
+  }
 
 }
