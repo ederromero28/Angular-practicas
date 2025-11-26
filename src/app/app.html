@@ -1,3 +1,6 @@
-<h1>Models | interfaces</h1>
+<h1>ngClass | Clases dinamicas</h1>
 
-<h2>Hola {{ userName }}</h2>
+<h2 [ngClass]="{dark: isDark, big: isFont}">Hola a todos</h2>
+
+<button (click)="toggleDarkMode()">Cambiar a dark</button>
+<button (click)="toggleFontSize()">Cambiar tamaño y centrar</button>

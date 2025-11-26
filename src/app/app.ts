@@ -1,28 +1,25 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import SuperProduct from './models/SuperProduct';
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [NgClass, RouterOutlet],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App {
-  userName: string;
-  myNumber: number;
-  myBoolean: boolean;
-  superProduct: SuperProduct;
 
+  isDark: boolean = false;
+  isFont: boolean = false;
 
+  toggleDarkMode() {
+    this.isDark = !this.isDark;
+  }
 
-  constructor() {
-    this.userName = 'Eder';
-    this.myNumber = 10;
-    this.myBoolean = true;
-    this.superProduct = {
-      name: "nuevo producto",
-      price: 100,
-      isForSale: true
-    };
+  toggleFontSize() {
+    this.isFont = !this.isFont;
   }
 }
