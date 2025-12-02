@@ -28,4 +28,9 @@ export class Movie {
     ];
   }
 
+  //metodo para agregar una pelicula
+  addMovie(movie: Movies){
+    this.movies.push(movie);
+  }
+
 }
