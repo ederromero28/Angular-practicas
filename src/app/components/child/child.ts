@@ -1,4 +1,5 @@
-import { Component, output } from '@angular/core';
+import { Component } from '@angular/core';
+import { ProductService } from '../../services/product';
 
 @Component({
   selector: 'app-child',
@@ -8,15 +9,8 @@ import { Component, output } from '@angular/core';
 })
 export class Child {
 
-  // @Output()
-  // login: EventEmitter<any> = new EventEmitter<any>();
+  constructor(public productService: ProductService) {
 
-  login = output<any>();
-
-  userName: string = 'Eder Romero';
-
-  handleLogin() {
-    this.login.emit(this.userName);
   }
 
 }
