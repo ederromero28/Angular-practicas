@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 
@@ -9,6 +9,15 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class App {
+export class App implements OnInit{
+
+  constructor() {
+    console.log("Dentro del constructor");
+
+   }
+
+   ngOnInit(): void {
+    console.log("Dentro del ngOnInit");
+   }
 
 }
