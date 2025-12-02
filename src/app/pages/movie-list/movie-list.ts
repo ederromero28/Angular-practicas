@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Header } from '../../components/header/header';
 
 @Component({
   selector: 'app-movie-list',
-  imports: [],
+  imports: [Header],
   templateUrl: './movie-list.html',
   styleUrl: './movie-list.css',
 })
