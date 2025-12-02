@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Child } from "./components/child/child";
-import { Child2 } from "./components/child2/child2";
+import { RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Child, Child2],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
