@@ -29,8 +29,12 @@ export class Movie {
   }
 
   //metodo para agregar una pelicula
-  addMovie(movie: Movies){
+  addMovie(movie: Movies): void{
     this.movies.push(movie);
+  }
+
+  getMovie(name: string): Movies | undefined {
+    return this.movies.find((movie) => movie.name === name);
   }
 
 }

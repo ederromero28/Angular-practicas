@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+@if (selectedMovie) {
+  <h2>{{ selectedMovie.name }}</h2>
+  <p>Duration: {{ selectedMovie.duration }} minutes</p>
+  <p>Director: {{ selectedMovie.director }}</p>
+}@else {
+  <p>No existe ninguna pelicula con ese titulo.</p>
+}

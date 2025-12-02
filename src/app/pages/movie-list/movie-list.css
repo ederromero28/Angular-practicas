@@ -1,16 +1,32 @@
 .movie-list {
   margin: 30px;
-
-  .movie-item {
-    padding-left: 20px;
-    background-color: lightcoral;
-    border-bottom: 2px solid black;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .movie-item:hover {
-    background-color: orange;
-  }
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
 }
+
+.movie-list li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.movie-list .link {
+  text-decoration: none;
+  color: black;
+}
+
+.movie-list .movie-container {
+  padding-left: 20px;
+  background-color: lightcoral;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.movie-list .movie-container:hover {
+  background-color: orange;
+}
+
