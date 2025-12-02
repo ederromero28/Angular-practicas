@@ -1,6 +1,20 @@
-<h1>ngClass | Clases dinamicas</h1>
+<h1>Reactive Forms</h1>
 
-<h2 [ngClass]="{dark: isDark, big: isFont}">Hola a todos</h2>
+<form [formGroup]="movieForm" (ngSubmit)="handleSubmit()">
+  <fieldset>
+    <label for="movie-name">Name: </label>
+    <input type="text" id="movie-name" formControlName="name" placeholder="Name" />
+  </fieldset>
 
-<button (click)="toggleDarkMode()">Cambiar a dark</button>
-<button (click)="toggleFontSize()">Cambiar tamaño y centrar</button>
+  <fieldset>
+    <label for="movie-duration">Duration: </label>
+    <input type="text" id="movie-duration" formControlName="duration" placeholder="Duration" />
+  </fieldset>
+
+  <fieldset>
+    <label for="movie-director">Director: </label>
+    <input type="text" id="movie-director" formControlName="director" placeholder="Director" />
+  </fieldset>
+
+  <button type="submit">Create Movie</button>
+</form>

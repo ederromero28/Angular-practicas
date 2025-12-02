@@ -1,25 +1,34 @@
-import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgClass, RouterOutlet],
+  imports: [ReactiveFormsModule],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App {
 
-  isDark: boolean = false;
-  isFont: boolean = false;
+  movieForm: FormGroup;
+  name: FormControl;
+  duration: FormControl;
+  director: FormControl;
 
-  toggleDarkMode() {
-    this.isDark = !this.isDark;
+  constructor() {
+    this.name = new FormControl('');
+    this.duration = new FormControl('');
+    this.director = new FormControl('');
+
+    this.movieForm = new FormGroup({
+      name: this.name,
+      duration: this.duration,
+      director: this.director
+    });
   }
 
-  toggleFontSize() {
-    this.isFont = !this.isFont;
+  handleSubmit(): void {
+    console.log(this.movieForm.value);
   }
+
 }
