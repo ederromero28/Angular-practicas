@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -16,9 +16,9 @@ export class App {
   director: FormControl;
 
   constructor() {
-    this.name = new FormControl('');
-    this.duration = new FormControl('');
-    this.director = new FormControl('');
+    this.name = new FormControl('', Validators.required);
+    this.duration = new FormControl('', [Validators.required, Validators.max(300)]);
+    this.director = new FormControl('', Validators.required);
 
     this.movieForm = new FormGroup({
       name: this.name,
@@ -28,7 +28,8 @@ export class App {
   }
 
   handleSubmit(): void {
-    console.log(this.movieForm.value);
+    console.log("Movie created: ",this.movieForm.value);
+    this.movieForm.reset();
   }
 
 }
